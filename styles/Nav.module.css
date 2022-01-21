@@ -29,9 +29,47 @@
     margin-left: 1rem;
 }
 
-@media (max-width: 600px) {
+.nav .nav__mobileButton {
+    display: none;
+}
+
+.nav .nav__mobileButton img {
+    cursor: pointer;
+    max-height: 2rem;
+}
+
+.nav__mobile {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+
+    .nav {
+        padding: 1rem 2rem;
+    }
 
     .nav .nav__title {
         display: none;
+    }
+
+    .nav .nav__links {
+        display: none;
+    }
+
+    .nav .nav__mobileButton {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav__mobile {
+        align-items: center;
+        background: #47c3a4;
+        color: #fff;
+        display: flex;
+        font-size: 1.3rem;
+        font-weight: bold;
+        height: 4rem;
+        justify-content: space-between;
+        padding: 1rem 2rem;
     }
 }
