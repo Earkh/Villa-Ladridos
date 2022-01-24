@@ -16,7 +16,7 @@ export default function Home() {
       </div>
 
       <main className={styles.main}>
-        <h1>Villa Ladridos, hotel canino</h1>
+        <h1>El Hotel para tu mascota</h1>
         <h3>¿Tienes que viajar y no sabes con quién dejar a tu mejor amigo? ¿Tu peludito se queda en casa solo todo el
           día porque estás trabajando?</h3>
         <h3>¡Nosotras sabemos cómo ayudarte!</h3>
