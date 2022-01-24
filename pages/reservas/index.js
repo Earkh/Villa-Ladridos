@@ -1,8 +1,34 @@
-import styles from "../../styles/Home.module.css";
-import Head from "next/head";
+import {useState} from 'react';
+import Head from 'next/head';
+import DatePicker from 'react-datepicker';
+import {registerLocale, setDefaultLocale} from "react-datepicker";
+import es from 'date-fns/locale/es';
+
+import styles from '../../styles/Home.module.css';
+import stylesReservas from '../../styles/Reservas.module.css';
+import 'react-datepicker/dist/react-datepicker.css';
+
+import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 
 export default function Reservas() {
-  return(
+
+  // excludeDates={}
+  registerLocale('es', es)
+
+  const [startDateGD, setStartDateGD] = useState(new Date());
+
+  const [startDateRC, setStartDateRC] = useState(new Date());
+  const [endDateRC, setEndDateRC] = useState(null);
+  const onChange = (dates) => {
+    const [start, end] = dates;
+    setStartDateRC(start);
+    setEndDateRC(end);
+  };
+
+  const [showGD, setShowGD] = useState(false);
+  const [showRC, setShowRC] = useState(false);
+
+  return (
     <div>
       <Head>
         <title>Villa Ladridos 🐾</title>
@@ -12,6 +38,56 @@ export default function Reservas() {
 
       <main className={styles.main}>
         <h1>Reservas</h1>
+        <div
+          className={stylesReservas.accordion__guarderia}
+          onClick={() => {
+            setShowGD(!showGD)
+          }}
+        >
+          <div className={stylesReservas.accordion__header}>
+            <h2>Guardería de día</h2>{showGD ? <FaAngleUp/> : <FaAngleDown/>}
+          </div>
+          {
+            showGD
+              ?
+              <DatePicker
+                selected={startDateGD}
+                onChange={(date) => setStartDateGD(date)}
+                startDate={startDateGD}
+                locale="es"
+                calendarStartDay={1}
+                inline
+              />
+              : ""
+          }
+        </div>
+        <div
+          className={stylesReservas.accordion__residencia}
+          onClick={() => {
+            setShowRC(!showRC)
+          }}
+        >
+          <div className={stylesReservas.accordion__header}>
+            <h2>Residencia canina</h2>{showRC ? <FaAngleUp/> : <FaAngleDown/>}
+          </div>
+          {
+            showRC
+              ?
+              <DatePicker
+                selected={startDateRC}
+                onChange={onChange}
+                startDate={startDateRC}
+                endDate={endDateRC}
+                locale="es"
+                calendarStartDay={1}
+                selectsRange
+                selectsDisabledDaysInRange
+                inline
+              />
+              : ""
+          }
+
+        </div>
       </main>
 
     </div>
