@@ -8,7 +8,7 @@ import styles from '../../styles/Home.module.css';
 import stylesReservas from '../../styles/Reservas.module.css';
 import 'react-datepicker/dist/react-datepicker.css';
 
-import { FaAngleDown, FaAngleUp } from "react-icons/fa";
+import {FaAngleDown, FaAngleUp} from "react-icons/fa";
 
 export default function Reservas() {
 
@@ -40,25 +40,37 @@ export default function Reservas() {
         <h1 className={stylesReservas.title}>RESERVAS</h1>
         <div
           className={stylesReservas.accordion__guarderia}
-          onClick={() => {
-            setShowGD(!showGD);
-            setShowRC(false);
-          }}
         >
-          <div className={stylesReservas.accordion__header}>
+          <div
+            className={stylesReservas.accordion__header}
+            onClick={() => {
+              setShowGD(!showGD);
+              setShowRC(false);
+            }}
+          >
             <h2>Guardería de día</h2>{showGD ? <FaAngleUp/> : <FaAngleDown/>}
           </div>
           {
             showGD
               ?
-              <DatePicker
-                selected={startDateGD}
-                onChange={(date) => setStartDateGD(date)}
-                startDate={startDateGD}
-                locale="es"
-                calendarStartDay={1}
-                inline
-              />
+              <div className={stylesReservas.form}>
+                <DatePicker
+                  selected={startDateGD}
+                  onChange={(date) => setStartDateGD(date)}
+                  startDate={startDateGD}
+                  locale="es"
+                  calendarStartDay={1}
+                  inline
+                />
+                <form>
+                  <input type="text" placeholder="Nombre"/>
+                  <input type="email" placeholder="Email"/>
+                  <input type="phone" placeholder="Teléfono"/>
+                  <label htmlFor="num">Número de peludos</label>
+                  <input type="number" id="num" min={1}/>
+                  <button type="submit" className={stylesReservas.button}>Reservar</button>
+                </form>
+              </div>
               : ""
           }
         </div>
@@ -75,17 +87,28 @@ export default function Reservas() {
           {
             showRC
               ?
-              <DatePicker
-                selected={startDateRC}
-                onChange={onChange}
-                startDate={startDateRC}
-                endDate={endDateRC}
-                locale="es"
-                calendarStartDay={1}
-                selectsRange
-                selectsDisabledDaysInRange
-                inline
-              />
+              <div  className={stylesReservas.form}>
+                <DatePicker
+                  selected={startDateRC}
+                  onChange={onChange}
+                  startDate={startDateRC}
+                  endDate={endDateRC}
+                  locale="es"
+                  calendarStartDay={1}
+                  selectsRange
+                  selectsDisabledDaysInRange
+                  inline
+                />
+                <form>
+                  <input type="text" placeholder="Nombre"/>
+                  <input type="email" placeholder="Email"/>
+                  <input type="phone" placeholder="Teléfono"/>
+                  <label htmlFor="num">Número de peludos</label>
+                  <input type="number" id="num" min={1}/>
+                  <button type="submit" className={stylesReservas.button}>Reservar</button>
+                </form>
+              </div>
+
               : ""
           }
 

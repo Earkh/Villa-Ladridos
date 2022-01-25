@@ -1,5 +1,7 @@
 import Head from "next/head";
 import styles from "../../styles/Home.module.css";
+import stylesContacto from "../../styles/Contacto.module.css"
+import stylesReservas from "../../styles/Reservas.module.css";
 
 export default function Contacto() {
   return (
@@ -10,8 +12,18 @@ export default function Contacto() {
         <link rel="icon" href="/favicon.ico"/>
       </Head>
 
-      <main className={styles.main}>
-        <h1>Contáctanos</h1>
+      <main className={stylesContacto.main}>
+        <div className={stylesContacto.form}>
+          <h1>Contáctanos</h1>
+          <form>
+            <input type="text" placeholder="Nombre"/>
+            <input type="email" placeholder="Email"/>
+            <input type="phone" placeholder="Teléfono"/>
+            <textarea placeholder="Mensaje"/>
+            <button type="submit" className={stylesReservas.button}>Enviar</button>
+          </form>
+        </div>
+        <div className={stylesContacto.asideImage}>&nbsp;</div>
       </main>
 
     </div>
