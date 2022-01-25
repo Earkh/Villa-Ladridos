@@ -14,12 +14,12 @@ export default function Contacto() {
 
       <main className={stylesContacto.main}>
         <div className={stylesContacto.form}>
-          <h1>Contáctanos</h1>
           <form>
+            <h1>Contáctanos</h1>
             <input type="text" placeholder="Nombre"/>
             <input type="email" placeholder="Email"/>
             <input type="phone" placeholder="Teléfono"/>
-            <textarea placeholder="Mensaje"/>
+            <textarea placeholder="Mensaje" rows={80}/>
             <button type="submit" className={stylesReservas.button}>Enviar</button>
           </form>
         </div>
