@@ -17,7 +17,7 @@
     text-align: center;
 }
 
-.main {
+.container {
     padding: 1rem 20rem;
     flex: 1;
     display: flex;
@@ -26,7 +26,7 @@
     align-items: center;
 }
 
-.main p {
+.container p {
     font-size: 1.2rem;
     padding: 0 1rem;
     text-align: justify;
@@ -45,6 +45,19 @@
     margin: 1rem 0;
     height: 450px;
 }
+
+.main__services {
+    background-color: #fafafa;
+    padding: 2rem 0;
+    text-align: center;
+    width: 100%;
+}
+.services__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
 
 @media (max-width: 1024px) {
     .main {

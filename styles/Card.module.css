@@ -1,0 +1,33 @@
+
+.card{
+    background-color: #ffffff;
+    border: solid 1px rgba(99, 99, 99, 0.2);
+    border-radius: .3em;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin: 0 .5rem;
+    min-height: 100%;
+    position: relative;
+}
+
+.card__header {
+
+}
+
+.card__icon {
+    font-size: xx-large;
+}
+
+.card__body {
+    margin-bottom: 3.4rem;
+
+}
+
+.card__footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+.card__footer p {
+    font-weight: bold;
+    text-align: center;
+}

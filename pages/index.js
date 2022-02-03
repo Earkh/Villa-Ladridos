@@ -2,8 +2,40 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
+import Card from "../components/card/Card";
+import {FaHotel, FaBath} from "react-icons/fa";
+import {BiBone, BiTaxi} from "react-icons/bi";
 
 export default function Home() {
+
+  const services = [
+    {
+      name: "Residencia canina",
+      img: <FaHotel />,
+      description: "Nos hacemos cargo de tu mascota el tiempo que haga falta para que puedas irte de viaje sin preocupaciones",
+      price: "20€/Noche"
+    },
+    {
+      name: "Guardería",
+      img: <BiBone />,
+      description: "Deja a tu mascota en las mejores manos mientras trabajas o haces recados",
+      price: "10€"
+    },
+    {
+      name: "Baño",
+      img: <FaBath />,
+      description: "Tu mascota más limpia y brillante que nunca!",
+      price: "Desde 10€"
+    },
+    {
+      name: "Transporte",
+      img: <BiTaxi />,
+      description: "Contamos con un servicio de taxi canino por si no puedes traer o recoger a tu peludo",
+      price: "Telde: 4€, LP: 7€, Resto: 12€"
+    },
+  ]
+
+
   return (
     <div>
       <Head>
@@ -15,7 +47,7 @@ export default function Home() {
         <h1>Tu peludito en las mejores manos</h1>
       </div>
 
-      <main className={styles.main}>
+      <div className={styles.container}>
         <h1>El Hotel para tu mascota</h1>
         <h3>¿Tienes que viajar y no sabes con quién dejar a tu mejor amigo? ¿Tu peludito se queda en casa solo todo el
           día porque estás trabajando?</h3>
@@ -48,8 +80,22 @@ export default function Home() {
           </div>
         </div>
 
+        {/*<p>Residencia canina</p>*/}
+        {/*<p>Guardería de día</p>*/}
+        {/*<p>Baño</p>*/}
+        {/*<p>Transporte</p>*/}
+        {/*<h1>Donde estamos</h1>*/}
 
-      </main>
+
+      </div>
+      <div className={styles.main__services}>
+        <h1>Servicios</h1>
+        <section className={`${styles.container} ${styles.services__container}`}>
+          {
+            services.map(service => <Card key={service.name} service={service} />)
+          }
+        </section>
+      </div>
     </div>
   )
 }
