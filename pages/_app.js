@@ -2,6 +2,8 @@ import {useState} from 'react';
 import Link from 'next/link';
 import '../styles/globals.css'
 import navStyles from '../styles/Nav.module.css';
+import containerStyle from '../styles/Container.module.css';
+import footerStyle from '../styles/Footer.module.css';
 
 function MyApp({Component, pageProps}) {
 
@@ -9,18 +11,20 @@ function MyApp({Component, pageProps}) {
 
   return (
     <>
-      <nav className={navStyles.nav}>
-        <div className={navStyles.nav__box}>
-          <img src="/logo.png" alt="Villa Ladridos"/>
-          <Link href="/"><a className={navStyles.nav__title}>Villa Ladridos</a></Link>
-        </div>
-        <div className={`${navStyles.nav__box} ${navStyles.nav__links}`}>
-          <Link href="/instalaciones">Instalaciones</Link>
-          <Link href="/reservas">Reservas</Link>
-          <Link href="/contacto">Contacto</Link>
-        </div>
-        <div className={navStyles.nav__mobileButton} onClick={() => setMobileMenu(!mobileMenu)}>
-          <img src="/menu.png" alt="menu"/>
+      <nav className={containerStyle.nav__container}>
+        <div className={navStyles.nav}>
+          <div className={navStyles.nav__box}>
+            <img src="/logo.png" alt="Villa Ladridos"/>
+            <Link href="/"><a className={navStyles.nav__title}>Villa Ladridos</a></Link>
+          </div>
+          <div className={`${navStyles.nav__box} ${navStyles.nav__links}`}>
+            <Link href="/instalaciones">Instalaciones</Link>
+            <Link href="/reservas">Reservas</Link>
+            <Link href="/contacto">Contacto</Link>
+          </div>
+          <div className={navStyles.nav__mobileButton} onClick={() => setMobileMenu(!mobileMenu)}>
+            <img src="/menu.png" alt="menu"/>
+          </div>
         </div>
       </nav>
       {
@@ -41,6 +45,17 @@ function MyApp({Component, pageProps}) {
         )
       }
       <Component {...pageProps} />
+      <footer className={footerStyle.footer}>
+        <div className={containerStyle.container}>
+          <div className={footerStyle.footer__grid}>
+            <div>
+              <h1>Villa Ladridos</h1>
+            </div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </footer>
     </>
   )
 }

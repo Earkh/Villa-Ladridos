@@ -17,6 +17,14 @@
     text-align: center;
 }
 
+.main__welcome {
+    align-items: center;
+    color: #47c3a4;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
 .container {
     padding: 1rem 20rem;
     flex: 1;
@@ -32,10 +40,23 @@
     text-align: justify;
 }
 
-.main__presentation {
+.main__presentation h3 {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: larger;
+}
+
+.main__presentation__grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    line-height: 1.8;
+    padding-top: 2rem;
+}
+
+.main__presentation__text p {
+    font-size: large;
+    line-height: 2.4rem;
+    padding-right: 1rem;
+    text-align: justify;
 }
 
 .main__presentation__image {

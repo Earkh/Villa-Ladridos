@@ -1,39 +1,37 @@
 .nav {
     align-items: center;
-    border-bottom: solid 1px rgba(0,0,0, 0.1);
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     display: flex;
     justify-content: space-between;
     max-height: 90px;
-    padding: 1rem 8rem;
-    width: 100%;
 }
 
-.nav img {
+.nav .nav__box {
+    align-items: center;
+    display: flex;
+    font-size: 1.3rem;
+}
+
+.nav__box img {
     max-height: 58px;
 }
 
-.nav .nav__title {
+.nav__box .nav__title {
     color: #47c3a4;
     font-family: 'Bree Serif', serif;
     font-size: 2.6rem;
 }
 
-.nav .nav__box {
-    display: flex;
-    align-items: center;
-    font-size: 1.3rem;
-}
 
-.nav .nav__box a {
+
+.nav__box a {
     margin-left: 1rem;
 }
 
-.nav .nav__mobileButton {
+.nav__mobileButton {
     display: none;
 }
 
-.nav .nav__mobileButton img {
+.nav__mobileButton img {
     cursor: pointer;
     max-height: 2rem;
 }

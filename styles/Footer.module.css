@@ -1,0 +1,10 @@
+.footer {
+    background: #374955;
+    color: #f8f7f3;
+    width: 100%;
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
