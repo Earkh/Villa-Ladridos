@@ -62,20 +62,26 @@
 .main__presentation__image {
     background-image: url("/pet-hotels.png");
     background-size: cover;
-    height: auto;
     margin: 1rem 0;
     height: 450px;
 }
 
 .main__services {
     background-color: #fafafa;
-    padding: 2rem 0;
+    padding: 2rem 0 4rem 0;
     text-align: center;
     width: 100%;
 }
 .services__container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+}
+
+.main__footer__image {
+    background-image: url("/dog-playing.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 40vh;
 }
 
 

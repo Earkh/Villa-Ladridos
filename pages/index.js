@@ -113,6 +113,10 @@ export default function Home() {
           }
         </section>
       </div>
+      <div className={styles.main__footer__image}>
+        &nbsp;
+      </div>
     </div>
+
   )
 }
