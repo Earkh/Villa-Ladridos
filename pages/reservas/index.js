@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import Head from 'next/head';
 import DatePicker from 'react-datepicker';
-import {registerLocale, setDefaultLocale} from "react-datepicker";
+import {registerLocale} from 'react-datepicker';
 import es from 'date-fns/locale/es';
 
 import styles from '../../styles/Home.module.css';
@@ -9,15 +9,13 @@ import stylesReservas from '../../styles/Reservas.module.css';
 import stylesContainer from '../../styles/Container.module.css';
 import 'react-datepicker/dist/react-datepicker.css';
 
-import {FaAngleDown, FaAngleUp} from "react-icons/fa";
+import {FaAngleDown, FaAngleUp} from 'react-icons/fa';
 
 export default function Reservas() {
 
-  // excludeDates={}
   registerLocale('es', es)
 
   const [startDateGD, setStartDateGD] = useState(new Date());
-
   const [startDateRC, setStartDateRC] = useState(new Date());
   const [endDateRC, setEndDateRC] = useState(null);
   const onChange = (dates) => {

@@ -69,5 +69,7 @@
         height: 4rem;
         justify-content: space-between;
         padding: 1rem 2rem;
+        position: absolute;
+        width: 100%;
     }
 }

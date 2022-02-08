@@ -1,9 +1,34 @@
 .container, .nav__container  {
     padding: 1rem 20rem;
-    width: 100%;
+    max-width: 120rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .nav__container {
     border-bottom: solid 1px rgba(0,0,0, 0.1);
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    max-width: 100% !important;
+}
+
+@media (max-width: 576px) {
+
+    .container, .nav__container  {
+        padding: 1rem 1rem;
+        width: 100vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .nav__container {
+        border-bottom: solid 1px rgba(0,0,0, 0.1);
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        max-width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #__next {
+        display: flex
+    }
 }

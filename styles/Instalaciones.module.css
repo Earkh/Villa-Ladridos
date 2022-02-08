@@ -1,0 +1,11 @@
+.carousel__bg {
+    background-color: #c7fceb;
+    padding: 3rem;
+    width: 100%;
+}
+
+.carousel {
+    margin-left: auto;
+    margin-right: auto;
+    width: 713px;
+}
