@@ -13,6 +13,7 @@
 }
 
 .nav__box img {
+    cursor: pointer;
     max-height: 58px;
 }
 

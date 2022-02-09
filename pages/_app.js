@@ -14,7 +14,7 @@ function MyApp({Component, pageProps}) {
       <nav className={containerStyle.nav__container}>
         <div className={navStyles.nav}>
           <div className={navStyles.nav__box}>
-            <img src="/logo.png" alt="Villa Ladridos"/>
+            <Link href="/"><img src="/logo.png" alt="Villa Ladridos"/></Link>
             <Link href="/"><a className={navStyles.nav__title}>Villa Ladridos</a></Link>
           </div>
           <div className={`${navStyles.nav__box} ${navStyles.nav__links}`}>

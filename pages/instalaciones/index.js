@@ -1,9 +1,9 @@
 import Head from "next/head";
-import {EmblaCarousel} from "../../components/carousel/Carousel";
+import {EmblaCarousel} from '../../components/carousel/Carousel';
 
+import styles from '../../styles/Home.module.css';
 import containerStyles from '../../styles/Container.module.css';
 import instalacionesStyles from '../../styles/Instalaciones.module.css';
-import styles from "../../styles/Home.module.css";
 
 export default function Instalaciones() {
   const images = ["/slider1.png", "/slider2.png", "/slider3.png"]
@@ -41,7 +41,6 @@ export default function Instalaciones() {
           <EmblaCarousel images={images}/>
         </div>
       </div>
-
     </div>
   )
 }

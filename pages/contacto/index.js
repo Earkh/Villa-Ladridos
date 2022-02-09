@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import styles from '../../styles/Home.module.css';
 import containerStyle from '../../styles/Container.module.css'
 import contactoStyle from '../../styles/Contacto.module.css'
 import reservaStyle from '../../styles/Reservas.module.css';
@@ -13,7 +12,6 @@ export default function Contacto() {
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="icon" href="/favicon.ico"/>
       </Head>
-
       <main className={contactoStyle.main}>
         <div className={contactoStyle.form}>
           <form className={containerStyle.container}>
@@ -27,7 +25,6 @@ export default function Contacto() {
         </div>
         <div className={contactoStyle.asideImage}>&nbsp;</div>
       </main>
-
     </div>
   )
 }

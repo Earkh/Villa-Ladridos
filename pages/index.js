@@ -1,10 +1,9 @@
 import Head from 'next/head'
+import Card from '../components/card/Card';
 import styles from '../styles/Home.module.css'
 import containerStyle from '../styles/Container.module.css'
-import Card from "../components/card/Card";
-import {FaHotel, FaBath} from "react-icons/fa";
-import {BiBone, BiTaxi} from "react-icons/bi";
-import {FaPaw} from "react-icons/Fa";
+import {FaBath, FaHotel, FaPaw} from 'react-icons/fa';
+import {BiBone, BiTaxi} from 'react-icons/bi';
 
 export default function Home() {
 
@@ -24,7 +23,7 @@ export default function Home() {
     {
       name: "Baño",
       img: <FaBath/>,
-      description: "Tu mascota más limpia y brillante que nunca!",
+      description: "¡Tu mascota más limpia y brillante que nunca!",
       price: "Desde 10€"
     },
     {
@@ -34,7 +33,6 @@ export default function Home() {
       price: "Telde: 4€, LP: 7€, Resto: 12€"
     },
   ]
-
 
   return (
     <div>
@@ -66,8 +64,7 @@ export default function Home() {
         </div>
         <div className={styles.main__presentation}>
           <h3>¿Tienes que viajar y no sabes con quién dejar a tu mejor amigo? ¿Tu peludito se queda en casa solo todo
-            el
-            día porque estás trabajando?</h3>
+            el día porque estás trabajando?</h3>
           <h3>¡Nosotras sabemos cómo ayudarte!</h3>
           <div className={styles.main__presentation__grid}>
             <div className={styles.main__presentation__text}>
@@ -91,8 +88,7 @@ export default function Home() {
                 casa
                 y disfruten de su estancia. Es muy importante para nosotros que tu perro este a gusto en nuestra
                 guardería, así como que tú te sientas cómodo y seguro dejándonos a tu mejor amigo. Es por ello que
-                tenemos
-                a disposición las cámaras web para tu mayor tranquilidad.
+                tenemos a disposición las cámaras web para tu mayor tranquilidad.
               </p>
             </div>
             <div className={styles.main__presentation__image__grid}>
@@ -116,6 +112,5 @@ export default function Home() {
         &nbsp;
       </div>
     </div>
-
   )
 }
