@@ -32,9 +32,9 @@
 }
 
 .main__presentation h3 {
-    text-align: center;
     font-family: 'Nunito', sans-serif;
     font-size: larger;
+    text-align: center;
 }
 
 .main__presentation__grid {
@@ -53,8 +53,8 @@
 .main__presentation__image {
     background-image: url("/pet-hotels.png");
     background-size: cover;
-    margin: 1rem 0;
     height: 450px;
+    margin: 1rem 0;
 }
 
 .main__services {
@@ -70,8 +70,8 @@
 
 .main__footer__image {
     background-image: url("/dog-playing.jpg");
-    background-size: cover;
     background-position: center;
+    background-size: cover;
     min-height: 40vh;
 }
 
@@ -146,11 +146,9 @@
     .main__footer__image {
         background-position: left center;
     }
-
 }
 
 @media (max-width: 992px) {
-
     .main__presentation__image__grid {
         background-color: #c7fceb;
         display: flex;
