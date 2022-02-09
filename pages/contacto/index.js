@@ -1,7 +1,8 @@
-import Head from "next/head";
-import styles from "../../styles/Home.module.css";
-import stylesContacto from "../../styles/Contacto.module.css"
-import stylesReservas from "../../styles/Reservas.module.css";
+import Head from 'next/head';
+import styles from '../../styles/Home.module.css';
+import containerStyle from '../../styles/Container.module.css'
+import contactoStyle from '../../styles/Contacto.module.css'
+import reservaStyle from '../../styles/Reservas.module.css';
 
 export default function Contacto() {
   return (
@@ -13,18 +14,18 @@ export default function Contacto() {
         <link rel="icon" href="/favicon.ico"/>
       </Head>
 
-      <main className={stylesContacto.main}>
-        <div className={stylesContacto.form}>
-          <form>
+      <main className={contactoStyle.main}>
+        <div className={contactoStyle.form}>
+          <form className={containerStyle.container}>
             <h1>Contáctanos</h1>
             <input type="text" placeholder="Nombre"/>
             <input type="email" placeholder="Email"/>
             <input type="phone" placeholder="Teléfono"/>
             <textarea placeholder="Mensaje" rows={80}/>
-            <button type="submit" className={stylesReservas.button}>Enviar</button>
+            <button type="submit" className={reservaStyle.button}>Enviar</button>
           </form>
         </div>
-        <div className={stylesContacto.asideImage}>&nbsp;</div>
+        <div className={contactoStyle.asideImage}>&nbsp;</div>
       </main>
 
     </div>
