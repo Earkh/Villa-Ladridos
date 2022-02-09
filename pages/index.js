@@ -96,8 +96,10 @@ export default function Home() {
                   a disposición las cámaras web para tu mayor tranquilidad.
                 </p>
               </div>
-              <div className={styles.main__presentation__image}>
-                &nbsp;
+              <div className={styles.main__presentation__image__grid}>
+                <div className={styles.main__presentation__image}>
+                  &nbsp;
+                </div>
               </div>
             </div>
           </div>
