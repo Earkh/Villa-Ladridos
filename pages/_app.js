@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import Link from 'next/link';
-import '../styles/globals.css'
+import Image from 'next/image';
+import '../styles/globals.css';
 import navStyles from '../styles/Nav.module.css';
 import containerStyle from '../styles/Container.module.css';
 import footerStyle from '../styles/Footer.module.css';
@@ -14,7 +15,7 @@ function MyApp({Component, pageProps}) {
       <nav className={containerStyle.nav__container}>
         <div className={navStyles.nav}>
           <div className={navStyles.nav__box}>
-            <Link href="/"><img src="/logo.png" alt="Villa Ladridos"/></Link>
+            <Link href="/"><Image src="/img/logo.png" alt="Villa Ladridos" height={'58px'} width={'56px'} /></Link>
             <Link href="/"><a className={navStyles.nav__title}>Villa Ladridos</a></Link>
           </div>
           <div className={`${navStyles.nav__box} ${navStyles.nav__links}`}>

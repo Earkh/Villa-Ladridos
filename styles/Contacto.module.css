@@ -47,7 +47,7 @@
 }
 
 .asideImage {
-    background-image: url("/perro-oficina.png");
+    background-image: url("/img/perro-oficina.png");
     background-size: cover;
     background-position: right;
     height: 100%;
