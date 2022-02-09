@@ -14,7 +14,7 @@ export const EmblaCarousel = (imageArray) => {
     <div className="embla" ref={emblaRef}>
       <div className="embla__container">
         {
-          images.map(image => <div className="embla__slide"><Image src={image} alt="jardín" width={'710px'} height={'308px'}/></div>)
+          images.map(image => <div className="embla__slide"><Image src={image} alt="jardín" width={'710px'} height={'308px'} layout='responsive'/></div>)
         }
       </div>
     </div>
