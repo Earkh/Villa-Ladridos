@@ -15,8 +15,8 @@ function MyApp({Component, pageProps}) {
       <nav className={containerStyle.nav__container}>
         <div className={navStyles.nav}>
           <div className={navStyles.nav__box}>
-            <Link href="/"><Image src="/img/logo.png" alt="Villa Ladridos" height={'58px'} width={'56px'} /></Link>
-            <Link href="/"><a className={navStyles.nav__title}>Villa Ladridos</a></Link>
+            <Link href="/" passHref><Image src="/img/logo.png" alt="Villa Ladridos" height={'58px'} width={'56px'} /></Link>
+            <Link href="/" passHref><a className={navStyles.nav__title}>Villa Ladridos</a></Link>
           </div>
           <div className={`${navStyles.nav__box} ${navStyles.nav__links}`}>
             <Link href="/instalaciones">Instalaciones</Link>
@@ -24,7 +24,7 @@ function MyApp({Component, pageProps}) {
             <Link href="/contacto">Contacto</Link>
           </div>
           <div className={navStyles.nav__mobileButton} onClick={() => setMobileMenu(!mobileMenu)}>
-            <img src="/menu.png" alt="menu"/>
+            <Image src="/img/menu.png" alt="menu" height={'32px'} width={'32px'} />
           </div>
         </div>
       </nav>

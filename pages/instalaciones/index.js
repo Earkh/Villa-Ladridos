@@ -6,7 +6,7 @@ import containerStyles from '../../styles/Container.module.css';
 import instalacionesStyles from '../../styles/Instalaciones.module.css';
 
 export default function Instalaciones() {
-  const images = ["/slider1.png", "/slider2.png", "/slider3.png"]
+  const images = ["/img/slider1.png", "/img/slider2.png", "/img/slider3.png"]
 
   return (
     <div>
